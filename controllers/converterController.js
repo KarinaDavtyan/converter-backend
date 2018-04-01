@@ -1,11 +1,16 @@
-const myFunctions = require('../helpers/converter');
+const converterFunctions = require('../helpers/converter');
+const realWordCheckerFunctions = require('../helpers/realWordChecker');
 
-const { converter } = myFunctions;
+const { converter } = converterFunctions;
+const { realWordChecker } = realWordCheckerFunctions;
+
 
 const convertNumber = async (req, res) => {
   const { text } = req.params;
-  const words = converter(text)
-  res.send(words);
+  console.log(text);
+  const words = converter(text);
+  const realWords =realWordChecker(words);
+  res.send(realWords);
 }
 
 module.exports = { convertNumber };
