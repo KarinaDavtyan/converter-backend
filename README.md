@@ -13,9 +13,17 @@ Installation
 
 `yarn install`
 
+`yarn run dev`
+
+or
+
+`yarn test` for testing
+
 + Follow installation steps of the [converter frontend repo](https://github.com/KarinaDavtyan/converter)
 
 Tech-stack
 ----
 
 + Node + Express
+
++ Mocha + Chai
