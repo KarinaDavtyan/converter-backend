@@ -21,4 +21,5 @@ const realWordChecker = (input) => {
   const output = result.length > 0 ? result : input;
   return output;
 }
-module.exports = {realWordChecker};
+
+module.exports = { realWordChecker };
