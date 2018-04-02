@@ -6,7 +6,7 @@ const longWords = require('../dictionary/longWords');
 const realWordChecker = (input) => {
   const combinations = input;
   let result = [];
-  const dictionary = combinations[0].length <= 9
+  const dictionary = combinations[0].length < 9
     ? combinations[0].length >= 4
       ? mediumWords : shortWords
     : longWords;
