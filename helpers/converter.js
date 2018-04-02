@@ -28,7 +28,6 @@ const keyBoard = {
   ]
 }
 
-
 const converter = (input) => {
   if (!input) return null;
   if (input && typeof input !== 'string') return null;

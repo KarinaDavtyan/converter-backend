@@ -10,16 +10,20 @@ const realWordChecker = (input) => {
     ? combinations[0].length >= 4
       ? mediumWords : shortWords
     : longWords;
-  combinations.forEach(comb => {
-    let matchedWords = dictionary.words.filter((word) => {
-      let match = word.match(new RegExp(`^${comb}$`));
-      if (match !== null) {
-        return result.push(comb);
-      }
+  try {
+    combinations.forEach(comb => {
+      let matchedWords = dictionary.words.filter((word) => {
+        let match = word.match(new RegExp(`^${comb}$`));
+        if (match !== null) {
+          return result.push(comb);
+        }
+      })
     })
-  })
-  const output = result.length > 0 ? result : input;
-  return output;
+    const output = result.length > 0 ? result : input;
+    return output;
+  } catch (e) {
+    return null;
+  }
 }
 
 module.exports = { realWordChecker };

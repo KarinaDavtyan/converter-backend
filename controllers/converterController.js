@@ -12,6 +12,7 @@ const convertNumber = async (req, res) => {
     const words = converter(text);
     if (words === null) res.sendStatus(400);
     const realWords = realWordChecker(words);
+    if (realWords === null) res.sendStatus(400);
     res.status(200).send(realWords);
   }
 }
