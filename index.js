@@ -9,7 +9,7 @@ const port = 3000;
 
 app.use(cors());
 
-app.get('/:text', converterController.convertNumber)
+app.get('/:text/:page', converterController.convertNumber)
 
 app.listen(port, () => {
   // eslint-disable-next-line no-console
