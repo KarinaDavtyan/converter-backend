@@ -13,7 +13,8 @@ const convertNumber = async (req, res) => {
     if (words === null) res.sendStatus(400);
     const realWords = realWordChecker(words, page);
     if (realWords === null) res.sendStatus(400);
-    res.status(200).send(realWords);
+    const output = realWords.length > 100 ? realWords.splice((page-1)*100, 100) : realWords;
+    res.status(200).send(output);
   }
 }
 
