@@ -21,5 +21,3 @@ const realWordChecker = (input) => {
 }
 
 module.exports = { realWordChecker };
-
-module.exports = { realWordChecker };
