@@ -11,7 +11,7 @@ const realWordChecker = (input, page) => {
     : longWords;
   try {
     const result = combinations.filter(combination => {
-      dictionary.words.indexOf(combination) > 0
+      return dictionary.words.indexOf(combination) > 0
     });
     const output = result.length > 0 ? result : input;
     return output.length > 100 ? output.splice((page-1)*100, 100) : output;
